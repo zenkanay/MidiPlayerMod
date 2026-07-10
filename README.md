@@ -30,4 +30,4 @@ The mod maps MIDI instrument categories to Minecraft note block instruments in t
 | **DRUMS** | `BASEDRUM`, `SNARE`, `HAT` | Drums (Non-pitched) |
 
 ## License
-MIT License
+This project is licensed under the [MIT License](LICENSE).
