@@ -1,19 +1,12 @@
-# MidiPlayerMod
+# MidiPlayer
 
 A client-side Fabric mod for Minecraft 1.21.11 that plays MIDI files on surrounding note blocks automatically.
 
-## Features
+## Usage
 
-* Plays MIDI files on surrounding note blocks in real-time.
-* Automatically tunes nearby note blocks with a smart auto-tuning algorithm.
-* Provides a vanilla-styled configuration screen (default key is **M**, configurable in controls settings).
-
-## Requirements
-
-* **Minecraft**: `1.21.11`
-* **Mod Loader**: `Fabric`
-* **Dependencies**:
-  * `Fabric API`
+1. Place note blocks around you (within 4.5m radius).
+2. Press the Config GUI key (default is **M**, configurable in Minecraft's controls settings) to open the configuration screen.
+3. Select a MIDI file, click **Auto-Tune**, and click **Play**.
 
 ## Instrument Mapping Table
 
