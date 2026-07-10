@@ -1,6 +1,6 @@
 {
   "key.midiplayer.config": "MIDI演奏の設定画面を開く",
-  "category.midiplayer.general": "MIDI音符ブロックプレイヤー",
+  "key.category.midiplayer.general": "MidiPlayer",
 
   "gui.midiplayer.config.title": "MIDI音符ブロックプレイヤー設定",
   "gui.midiplayer.config.midi_file": "MIDIファイル: %s",

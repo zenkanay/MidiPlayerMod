@@ -1,6 +1,6 @@
 {
   "key.midiplayer.config": "Open Settings Menu",
-  "category.midiplayer.general": "MIDI Note Block Player",
+  "key.category.midiplayer.general": "MidiPlayer",
 
   "gui.midiplayer.config.title": "MIDI Note Block Player Settings",
   "gui.midiplayer.config.midi_file": "MIDI File: %s",
