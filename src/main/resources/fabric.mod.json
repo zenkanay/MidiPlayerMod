@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "midiplayer",
+  "name": "MIDI Note Block Player",
+  "description": "Plays MIDI files on note blocks automatically.",
+  "version": "${version}",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.example.midiplayer.ClientMod"
+    ]
+  },
+  "mixins": [
+    "midiplayer.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.17.3",
+    "minecraft": "~1.21.11",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}

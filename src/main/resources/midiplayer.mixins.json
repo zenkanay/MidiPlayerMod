@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "com.example.midiplayer.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "refmap": "midiplayer-refmap.json",
+  "mixins": [
+    "MinecraftClientMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

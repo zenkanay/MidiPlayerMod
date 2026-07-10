@@ -1,0 +1,28 @@
+# Gradle build outputs and caches
+.gradle/
+build/
+
+# Minecraft execution run directory
+run/
+
+# IDE settings and project files
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.project
+.classpath
+.settings/
+.factorypath
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Output jar files (built jars should be ignored from git)
+*.jar
+
+# Temporary extraction files
+midiplayer-refmap.json
