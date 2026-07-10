@@ -5,7 +5,7 @@ A client-side Fabric mod for Minecraft 1.21.11 that plays MIDI files on surround
 ## Usage
 
 1. Place note blocks around you (within 4.5m radius).
-2. Press **M** in-game to open the configuration screen.
+2. Press the Config GUI key (default is **M**, configurable in Minecraft's controls settings) to open the configuration screen.
 3. Select a MIDI file, click **Auto-Tune**, and click **Play**.
 
 ## Instrument Mapping Table
