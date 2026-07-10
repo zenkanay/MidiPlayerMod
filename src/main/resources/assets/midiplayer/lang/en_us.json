@@ -66,7 +66,9 @@
   "msg.midiplayer.parse_failed": "Failed to parse MIDI file: %s",
   "msg.midiplayer.instant_break_danger": "§6Playback cancelled: Note blocks might be broken. Please check your held item (axe), game mode, or Haste effect.",
   "msg.midiplayer.click_blocked": "§eInteraction disabled during playback to prevent breaking note blocks.",
-  "msg.midiplayer.tune.no_blocks": "§eNo note blocks found nearby (within 5 blocks radius).",
+  "msg.midiplayer.tune.no_file": "§cPlease select a MIDI file before tuning.",
+  "msg.midiplayer.tune.no_blocks": "§cNo interactive note blocks found nearby (within 4.5m reach).",
   "msg.midiplayer.tune.success": "§aAuto-tuned successfully! (%d blocks tuned with %d clicks).",
+  "msg.midiplayer.tune.already_tuned": "§aAll note blocks are already correctly tuned.",
   "msg.midiplayer.tune.warning": "§eWarning: Insufficient note blocks nearby. %d pitches were not tuned. Please place more blocks."
 }

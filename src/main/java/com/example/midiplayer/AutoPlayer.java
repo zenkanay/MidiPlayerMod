@@ -534,7 +534,7 @@ public class AutoPlayer {
 
     public void autoTune(List<ParsedEvent> events) {
         if (events == null || events.isEmpty()) {
-            sendSystemMessage(Text.literal("§c自動調律を実行するには、事前に曲ファイルを選択してください。"));
+            sendSystemMessage(Text.translatable("msg.midiplayer.tune.no_file"));
             return;
         }
 
@@ -569,7 +569,7 @@ public class AutoPlayer {
             }
 
             if (targets.isEmpty()) {
-                sendSystemMessage(Text.literal("§c周囲に触れる状態の調律対象ブロックが見つかりません（最大距離 4.5m）。"));
+                sendSystemMessage(Text.translatable("msg.midiplayer.tune.no_blocks"));
                 return;
             }
 
@@ -749,15 +749,15 @@ public class AutoPlayer {
                 }
             }
 
-            // 調律結果と不足警告の出力
+            // Output tuning results and warnings
             if (tunedCount > 0) {
-                sendSystemMessage(Text.literal("§a自動調律完了: " + tunedCount + "個のブロックを調整しました (合計右クリック: " + totalClicks + "回)"));
+                sendSystemMessage(Text.translatable("msg.midiplayer.tune.success", tunedCount, totalClicks));
             } else {
-                sendSystemMessage(Text.literal("§aすでにすべてのブロックが正しい音程で調律されています。"));
+                sendSystemMessage(Text.translatable("msg.midiplayer.tune.already_tuned"));
             }
 
             if (!unallocatedReqs.isEmpty()) {
-                sendSystemMessage(Text.literal("§c音符ブロックが不足しているため、一部の必要な音色・音階を調律できませんでした (不足数: " + unallocatedReqs.size() + "音)"));
+                sendSystemMessage(Text.translatable("msg.midiplayer.tune.warning", unallocatedReqs.size()));
             }
 
             // キャッシュをその場で直接即時同期

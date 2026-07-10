@@ -66,7 +66,9 @@
   "msg.midiplayer.parse_failed": "MIDIファイルの解析に失敗しました: %s",
   "msg.midiplayer.instant_break_danger": "§6音符ブロックを壊してしまうおそれがあるため、演奏を保留しました。手元のアイテム（斧など）やゲームモード、採掘速度上昇効果をご確認ください。",
   "msg.midiplayer.click_blocked": "§e演奏中は安全のため、ブロック破壊や設置などの操作が無効化されます。",
-  "msg.midiplayer.tune.no_blocks": "§e周辺（半径5ブロック以内）に音符ブロックが見つかりません。",
-  "msg.midiplayer.tune.success": "§a音符ブロックの調律が完了しました（%d個のブロックを計 %d回調律しました）。",
-  "msg.midiplayer.tune.warning": "§e警告：周辺の音符ブロックの個数が不足しているため、一部の音高（%d個）が調律されませんでした。ブロックを設置してください。"
+  "msg.midiplayer.tune.no_file": "§c自動調律を実行するには、事前に曲ファイルを選択してください。",
+  "msg.midiplayer.tune.no_blocks": "§c周囲に触れる状態の調律対象ブロックが見つかりません（最大距離 4.5m）。",
+  "msg.midiplayer.tune.success": "§a自動調律完了: %d個のブロックを調整しました (合計右クリック: %d回)",
+  "msg.midiplayer.tune.already_tuned": "§aすでにすべてのブロックが正しい音程で調律されています。",
+  "msg.midiplayer.tune.warning": "§c音符ブロックが不足しているため、一部の必要な音色・音階を調律できませんでした (不足数: %d音)"
 }
