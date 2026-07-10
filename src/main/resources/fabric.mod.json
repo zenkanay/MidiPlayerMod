@@ -10,6 +10,7 @@
       "com.example.midiplayer.ClientMod"
     ]
   },
+  "icon": "assets/midiplayer/icon.png",
   "mixins": [
     "midiplayer.mixins.json"
   ],
