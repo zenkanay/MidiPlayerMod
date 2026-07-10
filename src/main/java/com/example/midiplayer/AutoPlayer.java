@@ -854,6 +854,14 @@ public class AutoPlayer {
         return state.isOf(Blocks.NOTE_BLOCK) || state.isAir() || !state.isOpaque();
     }
 
+    public long getPausedTimeMs() {
+        return this.pausedTimeMs;
+    }
+
+    public void setPausedTimeMs(long ms) {
+        this.pausedTimeMs = ms;
+    }
+
     private static class TuneTarget {
         final BlockPos pos;
         final net.minecraft.block.enums.NoteBlockInstrument instrument;

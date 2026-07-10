@@ -54,12 +54,16 @@ public class ConfigScreen extends Screen {
         // 起動時に現在の曲のデータをキャッシュ
         cacheMidiData();
         
-        // すでに再生中の場合は、現在の再生位置をシークターゲットの初期値にする
+        // すでに再生中または一時停止中の場合は、現在の位置または一時停止位置をシークターゲットの初期値にする
         AutoPlayer player = ClientMod.getInstance().getAutoPlayer();
-        if (player != null && player.isActive()) {
-            MidiScheduler sched = player.getScheduler();
-            if (sched != null) {
-                this.seekTargetMs = sched.getCurrentTimeMs();
+        if (player != null) {
+            if (player.isPlaying()) {
+                MidiScheduler sched = player.getScheduler();
+                if (sched != null) {
+                    this.seekTargetMs = sched.getCurrentTimeMs();
+                }
+            } else if (player.getPausedTimeMs() > 0) {
+                this.seekTargetMs = player.getPausedTimeMs();
             }
         }
     }
@@ -448,6 +452,14 @@ public class ConfigScreen extends Screen {
             // スライダーの位置から目標のミリ秒を逆算
             long targetMs = Math.round(this.value * totalPlayTimeMs);
             ConfigScreen.this.seekTargetMs = targetMs;
+            
+            AutoPlayer p = ClientMod.getInstance().getAutoPlayer();
+            if (p != null) {
+                // 一時停止中の場合、AutoPlayer 内の一時停止位置（pausedTimeMs）もリアルタイムに同期する
+                if (p.getPausedTimeMs() > 0) {
+                    p.setPausedTimeMs(targetMs);
+                }
+            }
             
             // 再生中の場合は即座に再生位置をシーク
             ConfigScreen.this.triggerSeek(targetMs);
