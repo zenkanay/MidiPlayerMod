@@ -466,20 +466,20 @@ public class AutoPlayer {
     }
 
     private void onPlaybackFinished() {
-        Config config = ClientMod.getInstance().getConfig();
-        if (config.loopPlayback && currentEvents != null && !currentEvents.isEmpty()) {
+        MinecraftClient client = MinecraftClient.getInstance();
+        if (client == null) return;
+
+        client.execute(() -> {
+            Config config = ClientMod.getInstance().getConfig();
             sendSystemMessage(Text.translatable("msg.midiplayer.finished"));
-            MinecraftClient client = MinecraftClient.getInstance();
-            if (client != null) {
-                client.execute(() -> {
-                    startPlay(currentEvents, 0);
-                });
+            
+            if (config.loopPlayback && currentEvents != null && !currentEvents.isEmpty()) {
+                startPlay(currentEvents, 0);
+            } else {
+                scheduler = null;
+                this.pausedTimeMs = 0;
             }
-        } else {
-            sendSystemMessage(Text.translatable("msg.midiplayer.finished"));
-            scheduler = null;
-            this.pausedTimeMs = 0;
-        }
+        });
     }
 
     private boolean isInstantBreak(ClientPlayerEntity player, BlockPos pos, int slotId) {
