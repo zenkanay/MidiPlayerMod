@@ -29,11 +29,5 @@ The mod maps MIDI instrument categories to Minecraft note block instruments in t
 | **PERCUSSIVE** | `COW_BELL`, `XYLOPHONE`, `HARP` | Percussive Hits |
 | **DRUMS** | `BASEDRUM`, `SNARE`, `HAT` | Drums (Non-pitched) |
 
-## Compilation
-
-```bash
-./gradlew clean build
-```
-
 ## License
 MIT License
