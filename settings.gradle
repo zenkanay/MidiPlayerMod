@@ -9,4 +9,5 @@ pluginManagement {
     }
 }
 
-rootProject.name = 'midiplayer'
+rootProject.name = 'MidiPlayerMod'
+
